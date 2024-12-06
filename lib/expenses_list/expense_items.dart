@@ -13,7 +13,10 @@ class ExpenseItems extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         child: Column(
           children: [
-            Text(expenses.title),
+            Text(
+              expenses.title,
+              style: Theme.of(context).textTheme.copyWith().titleLarge,
+            ),
             SizedBox(
               height: 6,
             ),
@@ -21,6 +24,7 @@ class ExpenseItems extends StatelessWidget {
               children: [
                 Text(
                   '\$${expenses.amount.toStringAsFixed(2)}',
+                  style: TextStyle(color: Colors.orange),
                 ),
                 Spacer(),
                 Row(
@@ -31,6 +35,7 @@ class ExpenseItems extends StatelessWidget {
                     ),
                     Text(
                       expenses.date.toString(),
+                      style: TextStyle(color: Colors.orange),
                     ),
                   ],
                 )
