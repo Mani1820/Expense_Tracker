@@ -51,8 +51,18 @@ class _NewExpenseState extends State<NewExpense> {
         context: context,
         builder: (ctx) => AlertDialog(
           elevation: 100,
-          title: Text('Invalid Input'),
-          content: Text('Enter a valid Title, Amount or Date'),
+          title: Text(
+            'Invalid Input',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+          content: Text(
+            'Enter a valid Title, Amount or Date',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
           actions: [
             TextButton(
               onPressed: () {
@@ -67,8 +77,18 @@ class _NewExpenseState extends State<NewExpense> {
       showCupertinoDialog(
         context: context,
         builder: (ctx) => CupertinoAlertDialog(
-          title: Text('Invalid Input'),
-          content: Text('Enter a valid Title, Amount or Date'),
+          title: Text(
+            'Invalid Input',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+          content: Text(
+            'Enter a valid Title, Amount or Date',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
           actions: [
             TextButton(
               onPressed: () {
@@ -205,6 +225,7 @@ class _NewExpenseState extends State<NewExpense> {
                             _selectedDate == null
                                 ? 'No date selected'
                                 : formatter.format(_selectedDate!),
+                            style: TextStyle(color: Colors.black),
                           ),
                           IconButton(
                             onPressed: _enterDate,
@@ -235,6 +256,7 @@ class _NewExpenseState extends State<NewExpense> {
                                 value: categoryIcons,
                                 child: Text(
                                   categoryIcons.name.toUpperCase(),
+                                  style: TextStyle(color: Colors.black),
                                 ),
                               ),
                             )

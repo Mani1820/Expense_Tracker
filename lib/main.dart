@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme().copyWith(
           titleLarge: TextStyle(
             fontWeight: FontWeight.bold,
-            color: kColourScheme.inversePrimary,
+            color: kColourScheme.secondary,
           ),
         ),
       ),
